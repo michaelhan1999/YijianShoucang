@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: cd cf-worker && npm install && npm run build
+      - run: cd cf-worker && npm install
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
