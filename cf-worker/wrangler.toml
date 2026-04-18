@@ -1,0 +1,16 @@
+name = "yijianshoucang"
+main = "src/index.ts"
+compatibility_date = "2024-04-17"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "yijianshoucang-db"
+database_id = "1889dceb-8096-4e22-8021-649b7efe0315"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "c17169027ef44eb99a974920df6a6cb3"
+
+[vars]
+JWT_SECRET = "yijianshoucang-jwt-secret-change-in-production"
+ADMIN_SECRET = "yijianshoucang-admin-secret-change-in-production"
