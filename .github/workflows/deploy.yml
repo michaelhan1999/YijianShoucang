@@ -16,11 +16,8 @@ jobs:
           node-version: '20'
       - run: |
           cd cf-worker && npm install
-          npx wrangler deploy \
-            --api-token $CLOUDFLARE_API_TOKEN \
-            --account-id $CLOUDFLARE_ACCOUNT_ID \
-            --env production \
-            2>&1
+          npm install -g wrangler@latest
+          npx wrangler deploy --env production 2>&1
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
